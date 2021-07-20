@@ -3,19 +3,16 @@ package digitalinnovation.digionebank
 class Pessoa {
     var nome: String = "Rosimeire"
     var cpf: String = "123.123.123-12"
+    var rua: String = "Do Lara"
     private set
 
-    inner class Endereco {
-        var rua: String = "Rua Do Lara"
-   }
+    constructor()
+
+    fun pessoaInfo() = " Nome: $nome, CPF: $cpf, Rua: $rua"
+
 }
 fun main(){
     val rosimeire = Pessoa()
 
-
-    println(rosimeire)
-    println(rosimeire.nome)
-    println(rosimeire.cpf)
-
-    println(rosimeire.Endereco().rua)
+    println(rosimeire.pessoaInfo())
 }
